@@ -1,0 +1,415 @@
+{
+  "email": "hello@itspunch.com",
+  "navigationLinks": [
+    { 
+      "label": "work",
+      "href": "/work",
+      "symbol": "☺"
+    },{ 
+      "label": "approach",
+      "href": "/approach",
+      "symbol": "©"
+    },{ 
+      "label": "about",
+      "href": "/about",
+      "symbol": "?"
+    },{ 
+      "label": "contact",
+      "href": "/contact",
+      "symbol": "@"
+    }
+  ],
+  "socialLinks": [
+    { 
+      "label": "Instagram",
+      "href": "http://instagram/punch"
+    },{ 
+      "label": "LinkedIn",
+      "href": "http://linkedin/punch"
+    },{ 
+      "label": "Behance",
+      "href": "http://behance/punch"
+    }
+  ],
+  "intro": "We create verbal and visual content that packs a",
+  "copyright": "©2019 Punch. All Rights Reserved.",
+
+  "contact": {
+    "intro": "As good as it is to look through our website, we’d love to talk to you face to face about our work, what we do and how we might help.",
+    "punchline": "So please get in touch.",
+    "form": {
+      "intro": "We’d like to hear from you!",
+      "focusline": "Drop a line or two",
+      "emailPlaceholder": "YOUR EMAIL",
+      "submit": "Submit"
+    },
+    "email": {
+      "intro": "Or just email us",
+      "address": "hello@itspunch.com"
+    },
+    "image": {
+      "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+    }
+  },
+
+  "home": {
+    "video": {
+      "videoUrl": "http://www.stevenzuber.com//example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
+      "videoPosterUrl": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+    },
+    "intro": {
+      "heading": "Punch is a business partner for ambitious brands.",
+      "punchline": "Design, analytics & strategic marketing."
+    },
+    "links": [
+      {
+        "heading": "Find out more about our",
+        "label": "approach",
+        "arrow": "→",
+        "href": "/approach"
+      },
+      {
+        "heading": "Check out our featured",
+        "label": "projects",
+        "arrow": "↓",
+        "href": "#projects"
+      }
+    ],
+    "projectIds": [1, 2, 3, 4, 5, 6],
+    "exitBanner": {
+      "label": "MORE OF OUR WORK ->",
+      "href": "/work"
+    }
+  },
+
+  "work": {
+    "title": "All projects",
+    "exitBanner": {
+      "label": "OUR APPROACH ->",
+      "href": "/approach"
+    }
+  },
+
+  "about": {
+    "punchlines": ["Modern experiences.", "Exceptional service.", "Problem solved."],
+    "title": "A holistic approach",
+    "text": "It´s the sum of all interactions that constitute the experience of a brand. We therefore need to understand the entire brand ecosphere and anticipate future needs among the intended users, to be able to cater for seamless interactions across all touchpoints.",
+    "image": {
+      "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+    },
+    "exitBanner": {
+      "label": "SEE OUR WORK ->",
+      "href": "/work"
+    },
+    "topicsTitle": "What we do",
+    "topics": [
+      {
+        "heading": "Brand Strategy",
+        "items": [
+          "Research and insights",
+          "Brand architecture",
+          "Brand platforms",
+          "Naming and nomenclature systems",
+          "Communication strategy",
+          "Content strategy",
+          "Design strategy",
+          "Digital strategy",
+          "Portfolio strategy",
+          "Social media strategy"
+        ]
+      }, {
+        "heading": "Brand Communication",
+        "items": [
+          "Art direction",
+          "Brand story",
+          "Campaign concepts",
+          "Editorial design",
+          "Social media"
+        ]
+      }, {
+        "heading": "Brand Design",
+        "items": [
+          "Visual identity",
+          "Verbal identity",
+          "Sound identity",
+          "Typography",
+          "Image language",
+          "Illustration language",
+          "UX/UI design",
+          "Motion design",
+          "Brand portals/guidance"
+        ]
+      }, {
+        "heading": "Brand Experience",
+        "items": [
+          "Digital product design",
+          "Retail",
+          "Environments",
+          "Exhibitions",
+          "Packaging Design",
+          "Service design",
+          "Films",
+          "Application design"
+        ]
+      }
+    ]
+  },
+
+  "approach": {
+    "punchlines": ["Modern experiences.", "Exceptional service.", "Problem solved."],
+    "intro": "Our methodology derived from our broad experinces in creative industry. Based on that experience we defined",
+    "buttonLabel": "Our approach",
+    "exitline": "WE WOULD BE HAPPY TO GIVE YOU MORE  INSIGHTS ABOUT OUR WORK PROCESS",
+    "steps": [
+      {
+        "name": "Research",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "image": {
+          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        }
+      },
+      {
+        "name": "Collaboration",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "image": {
+          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        }
+      },
+      {
+        "name": "Design",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "image": {
+          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        }
+      },
+      {
+        "name": "Evaluation",
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
+        "image": {
+          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        }
+      }
+    ]
+  },
+
+  "projectFilters": ["Branding", "Web Design", "Digital Marketing", "Analytics"],
+  "projects": [
+    {
+      "id": 1,
+      "tags": ["Branding", "Digital Marketing", "Analytics"],
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 35,
+        "overflow": false,
+        "offsetTop": 100
+      },
+      "name": "ELLE MYRA",
+      "intro": "Not Your average \n e-commerce Website",
+      "heroimage": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      },
+      "analyticsLayout": false,
+      "articles": [
+        {
+          "text": {
+            "title": "CREATING A MEANINGFUL COMPANY IDEA BEHIND THE BRAND",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        }, {
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 90,
+            "overflow": false
+          }
+        }, {
+          "text": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 40,
+            "overflow": false
+          }
+        }, {
+          "isFlipped": true,
+          "text": {
+            "title": "Another lorem ipsum dolor sit amet",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 60,
+            "overflow": true
+          }
+        }, {
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 100,
+            "overflow": true
+          }
+        }, {
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 45,
+            "overflow": false
+          },
+          "secImage": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 45,
+            "overflow": true
+          }
+        }, {
+          "text": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 60,
+            "overflow": true
+          }
+        }, {
+          "image": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "width": 90,
+            "overflow": false
+          }
+        }
+      ],
+      "relatedProjects": {
+        "previous": { 
+          "id": 0,
+          "name": "We do I do",
+          "thumbnail": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+          },
+          "href": "http://www.stevenzuber.com/"
+        },
+        "next": { 
+          "id": 3,
+          "name": "Dib hotel",
+          "thumbnail": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+          }
+        }
+      }
+    }, {
+      "id": 2,
+      "name": "Test project 3",
+      "tags": ["Branding", "Analytics"],
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 50,
+        "overflow": true,
+        "offsetTop": 0
+      },
+      "href": "http://www.stevenzuber.com/"
+    }, {
+      "id": 3,
+      "tags": ["Analytics"],
+      "name": "Dib hotel",
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 45,
+        "overflow": false,
+        "offsetTop": 0
+      },
+      "intro": "Online campaign - Swedan \n 19.12 - 30.12.2018",
+      "heroimage": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      },
+      "analyticsLayout": true,
+      "articles": [
+        {
+          "title": "CPC performance \n over time",
+          "columns": [
+            {
+              "markdown": "",
+              "svg": ""
+            },
+            {
+              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
+              "svg": ""
+            }
+          ]
+        },
+        {
+          "tile": "Click/Cost \n performance",
+          "columns": [
+            {
+              "markdown": "",
+              "svg": ""
+            },
+            {
+              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
+              "svg": ""
+            }
+          ]
+        },
+        {
+          "tile": "Retargeting audience\n— Social media",
+          "columns": [
+            {
+              "markdown": "",
+              "svg": ""
+            },
+            {
+              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
+              "svg": ""
+            }
+          ]
+        }
+      ],
+      "relatedProjects": {
+        "previous": { 
+          "id": 1,
+          "name": "ELLE MYRA",
+          "thumbnail": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+          }
+        },
+        "next": { 
+          "id": 4,
+          "name": "Zuber web",
+          "thumbnail": {
+            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+          },
+          "href": "http://www.stevenzuber.com/"
+        }
+      }
+    }, {
+      "id": 4,
+      "name": "Test project 4",
+      "tags": ["Web Design"],
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 35,
+        "overflow": false,
+        "offsetTop": 150
+      }
+    }, {
+      "id": 5,
+      "name": "Test project 5",
+      "tags": ["Branding"],
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 30,
+        "overflow": false,
+        "offsetTop": 80
+      }
+    }, {
+      "id": 6,
+      "name": "Test project 6",
+      "tags": ["Analytics"],
+      "thumbnail": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+        "width": 55,
+        "overflow": true,
+        "offsetTop": 0
+      }
+    }
+  ]
+}

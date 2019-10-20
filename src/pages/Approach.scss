@@ -1,0 +1,76 @@
+@import '../index.scss';
+
+.approach__intro,
+.approach__exit {
+  max-width: 75%;
+}
+
+.approach__step {
+  margin-bottom: 17vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.step__text {
+  padding: 0 5vw;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.step__text-top {
+  margin-bottom: 5vw;
+}
+
+.step__text-middle,
+.step__text-bottom {
+  margin-bottom: 20px;
+  padding-left: 22%;
+}
+
+.step__image {
+  width: 75%;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: $screen-md) {
+  .approach__intro {
+    max-width: 50%;
+  }
+
+  .approach__intro p {
+    width: 60%;
+  }
+
+  .approach__exit {
+    max-width: 55%;
+  }
+
+  .approach__step {
+    margin-bottom: 120px;
+    flex-direction: row;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .step__text-top {
+    margin-bottom: 6vw;
+  }
+  
+  .step__text-middle {
+    margin-bottom: 4vw;
+    padding-left: 0;
+  }
+  
+  .step__text-bottom {
+    margin-bottom: 8vw;
+    padding-left: 0;
+  }
+
+  .step__image {
+    width: 60%;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,90 @@
+@import '../index.scss';
+
+.article--design {
+  .article__text {
+    width: 85vw;
+    max-width: 650px;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    p {
+      max-width: 420px;
+    }
+  }
+
+  .article__image {
+    flex-shrink: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+@media screen and (max-width: $screen-sm - 1) {
+  .article__image {
+    width: 90% !important;
+  }
+
+  .article__image--first {
+    margin-bottom: 80px;
+  }
+
+  .article--design {
+    .article__text p {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .article--design {
+    .article__text {
+      width: 60vw;
+    }
+  
+    .article__image {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .no-overflow {
+      margin-right: 5vw;
+    }
+  
+    &.reverse {
+      .no-overflow {
+        margin-left: 5vw;
+        margin-right: 0;
+      }
+    }
+
+    .article__image--first {
+      margin-left: 0;
+
+      &.no-overflow {
+        margin-left: 5vw;
+      }
+    }
+
+    .article__image--second {
+      margin-right: 0;
+
+      &.no-overflow {
+        margin-right: 5vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .article--design {
+    .article__text {
+      width: 50vw;
+      max-width: none;
+  
+      p {
+        max-width: none;
+        width: 70%;
+      }
+    }
+  }
+}

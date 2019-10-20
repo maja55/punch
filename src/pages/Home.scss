@@ -1,0 +1,71 @@
+@import '../index.scss';
+
+.home__video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: -1;
+
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.home__body {
+  margin-top: 100vh;
+  background-color: $dark;
+  display: grid;
+}
+
+.home__intro,
+.home__links {
+  margin: 50px 5vw 0;
+}
+
+.home__intro,
+.home__link {
+  width: 75%;
+}
+
+.home__link {
+  padding: 40px 0;
+}
+
+.home__links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: $screen-lg) {
+  .home__intro,
+  .home__link {
+    width: 50%;
+  }
+
+  .home__intro,
+  .home__links {
+    margin: 100px 5vw 90px
+  }
+
+  .home__links {
+    flex-direction: row-reverse;
+  }
+}

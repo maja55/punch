@@ -1,0 +1,59 @@
+@import '../index.scss';
+
+.article__title {
+  white-space: pre-line;
+}
+
+.article__columns {
+  display: flex;
+  width: 100%;
+}
+
+.article--analytics {
+  h1 {
+    @extend .t-lg;
+    color: $punch;
+  }
+
+  h3 {
+    @extend .t-md;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  ul p {
+    margin-bottom: 0;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .article__column {
+    width: 50%;
+  
+    &:nth-child(odd) {
+      padding-right: 2.5vw;
+    }
+  
+    &:nth-child(even) {
+      padding-left: 2.5vw;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .article__title {
+    width: 50%;
+  }
+}

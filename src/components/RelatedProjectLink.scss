@@ -1,0 +1,70 @@
+@import '../index.scss';
+
+.related-project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  width: fit-content;
+  padding-top: 40px;
+}
+
+.related-project__image {
+  padding-right: 5vw;
+  width: 65vw;
+  min-width: 250px;
+}
+
+.related-project--prev {
+  margin-left: auto;
+
+  .related-project__text {
+    text-align: right;
+  }
+
+  .related-project__image {
+    padding-left: 5vw;
+    padding-right: 0;
+  }
+}
+
+.related-project--next {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .related-project {
+    flex-direction: row;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 0;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  .related-project--prev {
+    flex-direction: row-reverse;
+    margin-bottom: 90px;
+  }
+
+  .related-project__image {
+    min-width: 60%;
+    flex: 1 0 60%;
+  }
+
+  .related-project__text {
+    min-width: 40%;
+    flex: 0 0 40%;
+  }
+
+  .related-project__image,
+  .related-project__text {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .related-project--prev {
+    margin-bottom: 120px;
+  }
+}
