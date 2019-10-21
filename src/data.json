@@ -54,7 +54,7 @@
 
   "home": {
     "video": {
-      "videoUrl": "http://www.stevenzuber.com//example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
+      "videoUrl": "https://storage.googleapis.com/example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
       "videoPosterUrl": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
     },
     "intro": {
@@ -77,7 +77,7 @@
     ],
     "projectIds": [1, 2, 3, 4, 5, 6],
     "exitBanner": {
-      "label": "MORE OF OUR WORK ->",
+      "label": "MORE OF OUR WORK →",
       "href": "/work"
     }
   },
@@ -85,7 +85,7 @@
   "work": {
     "title": "All projects",
     "exitBanner": {
-      "label": "OUR APPROACH ->",
+      "label": "OUR APPROACH →",
       "href": "/approach"
     }
   },
@@ -98,7 +98,7 @@
       "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
     },
     "exitBanner": {
-      "label": "SEE OUR WORK ->",
+      "label": "SEE OUR WORK →",
       "href": "/work"
     },
     "topicsTitle": "What we do",
@@ -337,7 +337,7 @@
           ]
         },
         {
-          "tile": "Click/Cost \n performance",
+          "title": "Click/Cost \n performance",
           "columns": [
             {
               "markdown": "",
@@ -350,7 +350,7 @@
           ]
         },
         {
-          "tile": "Retargeting audience\n— Social media",
+          "title": "Retargeting audience\n— Social media",
           "columns": [
             {
               "markdown": "",

@@ -41,12 +41,14 @@ const Project = () => {
             ))}
           </ul>
         </div>
-        <Image
-          baseClass="project"
-          classAddition="w-100"
-          src={ heroimage.src }
-          alt={ name }
-        />
+        { heroimage && 
+          <Image
+            baseClass="project"
+            classAddition="w-100"
+            src={ heroimage.src }
+            alt={ name }
+          />
+        }
       </section>
 
       <section className="project__articles" ref={ articlesEl }>

@@ -50,6 +50,20 @@
       padding-left: 2.5vw;
     }
   }
+
+  .reverse .article__column {
+    width: 50%;
+  
+    &:nth-child(even) {
+      padding-right: 2.5vw;
+      padding-left: 0;
+    }
+  
+    &:nth-child(odd) {
+      padding-left: 2.5vw;
+      padding-right: 0;
+    }
+  }
 }
 
 @media screen and (min-width: $screen-md) {

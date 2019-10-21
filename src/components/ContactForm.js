@@ -11,7 +11,7 @@ const ContactForm = ({ full }) => {
     event.preventDefault()
 
     const { text, email } = event.target;
-    console.log(text.value, email.value);
+    alert(`Text: ${text.value}\nFrom: ${email.value}\nFor this to work we need to set up email service on the server once we have one`);
   }
 
   return (

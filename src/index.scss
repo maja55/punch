@@ -168,6 +168,25 @@ a, button {
   }
 }
 
+.fade-in-up {
+  opacity: 0;
+  transform: translate3d(0,100px,0);
+  transition: opacity .8s ease-out .1s, transform 1.8s $transition-style;
+
+  &.revealed {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media screen and (min-width: $screen-sm) {
   .d-sm-inline-block {
     display: inline-block !important;

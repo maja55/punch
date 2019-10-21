@@ -23,7 +23,7 @@ const Home = () => {
           muted
           playsInline
           autoPlay
-          // loop
+          loop
         />
       </section>
 

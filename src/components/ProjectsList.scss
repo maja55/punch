@@ -15,11 +15,7 @@
   margin-left: 5vw;
   margin-right: 5vw;
   margin-bottom: 120px;
-  opacity: 1;
   position: relative;
-  transform: translateX(0);
-  will-change: opacity, max-width, transform;
-  transition: transform 0.3s ease-out 0.1s, max-width 0.3s ease-out 0.1s, margin-left 0.3s ease-out 0.1s, margin-right 0.3s ease-out 0.1s, opacity 0.3s ease-in;
 
   &.overflow {
     &:nth-child(odd) {
@@ -40,7 +36,6 @@
     opacity: 0;
     margin-left: 0;
     margin-right: 0;
-    transform: translateX(-100%)
   }
 }
 
