@@ -10,21 +10,46 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import Project from './pages/Project';
+import Arrow from './components/Arrow';
 
 import data from './data.json'
 
+
 const App = () => {
   let location = useLocation();
-  const [isMenuOpen, toggleMenu] = useState(() => false);
+  const [isMenuOpen, openMenu] = useState(() => false);
   const [isLoaded, setLoaded] = useState(() => false);
   const [animate, setAnimation] = useState(() => false);
+  const [animating, startAnimation] = useState(() => false);
+  const [scrollTop, setScrollTop] = useState(() => 0);
   const pageEl = useRef(null);
+
+  const toggleMenu = (open) => {
+    if (open) {
+      setScrollTop(window.scrollY)
+      document.body.classList.add('scrollLock');
+    } else {
+      document.body.classList.remove('scrollLock');
+
+      if (scrollTop) {
+        window.scroll(0, scrollTop);
+        setScrollTop(0)
+      }
+    }
+
+    openMenu(open)
+  }
+
+  const handleScroll = () => {
+    startAnimation(true)
+    setTimeout(() => { setAnimation(false) }, 1000)
+    window.removeEventListener('scroll', handleScroll);
+  }
 
   useEffect(() => {
     if (!isLoaded && !animate && !isMenuOpen && location.pathname === '/' && !location.hash) {
       setAnimation(true)
-    } else if (animate) {
-      setTimeout(() => { setAnimation(false) }, 7000)
+      window.addEventListener('scroll', handleScroll);
     }
     if (!isLoaded) setLoaded(true)
     if(isMenuOpen) toggleMenu(false)
@@ -32,14 +57,17 @@ const App = () => {
 
   return (
     <div
-      className={`page__wrapper page__wrapper--${location.pathname.substr(1)}${false ? ' scrollLock' : ''}`}
+      className={`page__wrapper page__wrapper--${location.pathname.substr(1)}`}
       ref={ pageEl }>
-      <Header
-        animateIntro={ animate }
-        intro={ data.intro }
-        isMenuOpen={ isMenuOpen }
-        toggleMenu={ () => toggleMenu(!isMenuOpen) }
-      />
+      { isLoaded &&
+        <Header
+          animateIntro={ animate }
+          shouldAnimate={ animating }
+          intro={ data.punchline }
+          isMenuOpen={ isMenuOpen }
+          toggleMenu={ () => toggleMenu(!isMenuOpen) }
+        />
+      }
 
       <Navigation
         isOpen={ isMenuOpen }
@@ -68,6 +96,15 @@ const App = () => {
         <Route path="/project/:id">
           <Project/>
         </Route>
+        <Route path="/news/">
+          <div/>
+        </Route>
+        <Route path="/news/:id">
+          <div/>
+        </Route>
+        <Route path="/services">
+          <div/>
+        </Route>
       </Switch>
 
       <Footer
@@ -78,7 +115,7 @@ const App = () => {
       <Button
         className="scroll-to-top"
         onClick={ () => pageEl.current.scrollIntoView({ behavior: 'smooth' }) }>
-        <span className="arrow arrow--big bounce-y t-punch">↑</span>
+        <Arrow className="arrow--big bounce-y" />
       </Button>
     </div>
   );

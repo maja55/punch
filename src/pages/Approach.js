@@ -1,62 +1,58 @@
 import React, { useRef } from 'react';
 import ContactForm from '../components/ContactForm';
-import Button from '../components/Button';
 import Image from '../components/Image';
+import AnimatedTextBanner from '../components/TextBanner';
 import './Approach.scss';
 
 import data from '../data.json'
 
+
 const Approach = () => {
   const stepsEl = useRef()
-  const { buttonLabel, exitline, intro, punchlines, steps } = data.approach;
+  const { intro, exit, steps } = data.approach;
 
   return (
     <div className="page approach pt">
-      <section className="approach__punchlines mx">
-        <ul className="t-lg t-uppercase t-punch">
-          { punchlines.map(line => <li key={ line }>{ line }</li>) }
-        </ul>
-      </section>
 
-      <section className="approach__intro mx">
-        <p>{ intro }</p>
-        <Button
-          className="approach__title"
-          onClick={() => stepsEl.current.scrollIntoView({ behavior: 'smooth' })}>
-          <h1 className="t-lg t-punch t-uppercase">
-            { buttonLabel }
-            <span className="arrow bounce-y">↓</span>
-          </h1>
-        </Button>
-      </section>
+      <AnimatedTextBanner
+        { ...intro }
+        isDown
+        className="approach__intro mx"
+        titleClass="t-uppercase"
+        onClick={ () => stepsEl.current.scrollIntoView({ behavior: 'smooth' })}
+      />
 
       <section ref={ stepsEl } className="approach__steps">
-        { steps.map(({ name, title, description, image }, i) => (
-          <div key={ name } className="approach__step">
-            <div className="step__text">
-              <div className="step__text-top t-md">
-                <div>{ `Step ${i + 1}` }</div>
-                <div className="t-uppercase">{ name }</div>
+        { steps.map(({ number, title, description, graphic }) => (
+          <section key={ title } className="approach__step">
+            <div className="step__text mx">
+              <div className="step__text-top inline-img__wrapper t-lg t-punch t-uppercase mb-3">
+                Step
+                <div className="inline-img h-100">
+                  <img src={ number } alt={ title } />
+                </div>
               </div>
-              <div className="step__text-middle t-lg t-punch t-uppercase">
-                { title }
-              </div>
-              <div className="step__text-bottom">
-                { description }
+              <div className="step__text-middle">
+                <h2 className="t-md">{ title }</h2>
+                <p className="mb-3">{ description }</p>
               </div>
             </div>
             <Image
-              src={ image.src }
-              alt={ name }
+              src={ graphic }
+              alt={ title }
               baseClass="step"
+              classAddition="mx"
             />
-          </div>
+          </section>
         ))}
       </section>
 
-      <section className="approach__exit t-lg t-uppercase t-punch mx">
-        { exitline }
-      </section>
+      <p className="approach__exit-desc t-md mx mb-4">{ exit.description }</p>
+      <AnimatedTextBanner
+        { ...exit }
+        titleClass="t-uppercase"
+        className="approach__exit mx"
+      />
 
       <ContactForm full />
     </div>

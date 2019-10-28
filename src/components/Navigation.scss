@@ -1,10 +1,5 @@
 @import '../index.scss';
 
-@keyframes slide-in {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-}
-
 .menu {
   position: fixed;
   top: 0;
@@ -12,16 +7,20 @@
   width: 100vw;
   height: 0px;
   z-index: 9;
-  transition: height 0.8s $transition-style;
+  transition: height 0.5s ease-in;
   overflow: hidden;
 
   &.open {
     height: 100vh;
   }
+
+  .text-content {
+    transition-duration: 0.5s !important;
+  }
 }
 
 .menu__wrapper {
-  padding: 20vh 5vw 12vh;
+  padding: 20vh 0 12vh;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -33,20 +32,29 @@
   margin-bottom: 50px;
 }
 
-.menu__navLink {
-  margin-bottom: 20px;
+.menu__navLink.inline-img__wrapper.text-mask {
   display: table;
+  line-height: 0.8;
+  padding-bottom: 2px;
+  margin-bottom: 27px;
 }
 
 .menu__navLinkSymbol {
   padding-right: 10px;
-  width: 50px;
-  display: inline-flex;
-  justify-content: center;
+
+  &.inline-img {
+    left: 0;
+    right: auto;
+    transform: translateX(-40px);
+  }
 }
 
 .menu__socialLinks {
-  padding-left: 50px;
+  padding-left: 40px;
+}
+
+.menu__navLink {
+  padding-left: calc(5vw + 40px);
 }
 
 .menu__socialLink {
@@ -54,25 +62,29 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: $screen-lg) {
-  .menu__navLinks {
+@media screen and (min-width: $screen-sm) {
+  .menu__socialLinks {
     padding-left: 50px;
   }
 
   .menu__navLink {
-    position: relative;
-
-    &:hover .menu__navLinkSymbol {
-      transform: translateX(0);
-    }
+    padding-left: calc(5vw + 50px);
   }
 
-  .menu__navLinkSymbol {
-    position: absolute;
-    padding-right: 20px;
-    top: 0;
-    left: -50px;
+  .menu__navLinkSymbol.inline-img {
+    transform: translateX(-50px);
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .menu__navLinkSymbol.inline-img {
     transform: translateX(-20vw);
     transition: transform 0.5s $transition-style;
+  }
+
+  .menu__navLink {
+    &:hover .menu__navLinkSymbol.inline-img {
+      transform: translateX(-50px);
+    }
   }
 }

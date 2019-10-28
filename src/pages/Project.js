@@ -59,17 +59,14 @@ const Project = () => {
         <section className="project__exit mx">
           { relatedProjects.previous &&
             <RelatedProjectLink
-              arrow="←"
               label="Previous case"
-              classModifier="prev"
               { ...relatedProjects.previous }
             />
           }
           { relatedProjects.next &&
             <RelatedProjectLink
-              arrow="→"
               label="Next case"
-              classModifier="next"
+              isNext
               { ...relatedProjects.next }
             />
           }

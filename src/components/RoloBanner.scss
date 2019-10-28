@@ -20,7 +20,7 @@
   right: 0;
   will-change: transform;
   transform: translate3d(0, 0, 0);
-  animation: roll 7s linear infinite;
+  animation: roll 10s linear infinite;
   white-space: nowrap;
 }
 
@@ -30,22 +30,24 @@
   text-align: center;
 }
 
-@media screen and (min-width: $screen-md) {
-  .rolo-banner{
-    height: 150px;
-
-    a {
-      animation-duration: 10s;
-    }
-  }
-
+@media screen and (min-width: $screen-sm) {
   .rolo-banner__label {
     width: 50vw;
   }
 }
 
+@media screen and (min-width: $screen-md) {
+  .rolo-banner {
+    height: 150px;
+  }
+
+  .rolo-banner a {
+    animation-duration: 15s;
+  }
+}
+
 @media screen and (min-width: $screen-xl) {
-  .rolo-banner{
+  .rolo-banner {
     height: 200px;
   }
 }

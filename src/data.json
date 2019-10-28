@@ -4,19 +4,27 @@
     { 
       "label": "work",
       "href": "/work",
-      "symbol": "☺"
+      "symbol": "./assets/svgs/symbol_work.svg"
     },{ 
       "label": "approach",
       "href": "/approach",
-      "symbol": "©"
+      "symbol": "./assets/svgs/symbol_approach.svg"
+    },{ 
+      "label": "services",
+      "href": "/services",
+      "symbol": "./assets/svgs/symbol_services.svg"
     },{ 
       "label": "about",
       "href": "/about",
-      "symbol": "?"
+      "symbol": "./assets/svgs/symbol_about.svg"
+    },{ 
+      "label": "news",
+      "href": "/news",
+      "symbol": "./assets/svgs/symbol_news.svg"
     },{ 
       "label": "contact",
       "href": "/contact",
-      "symbol": "@"
+      "symbol": "./assets/svgs/symbol_contact.svg"
     }
   ],
   "socialLinks": [
@@ -31,7 +39,7 @@
       "href": "http://behance/punch"
     }
   ],
-  "intro": "We create verbal and visual content that packs a",
+  "punchline": "We create verbal and visual content that packs a",
   "copyright": "©2019 Punch. All Rights Reserved.",
 
   "contact": {
@@ -54,8 +62,8 @@
 
   "home": {
     "video": {
-      "videoUrl": "https://storage.googleapis.com/example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
-      "videoPosterUrl": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      "url": "https://storage.googleapis.com/example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
+      "posterUrl": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
     },
     "intro": {
       "heading": "Punch is a business partner for ambitious brands.",
@@ -77,7 +85,7 @@
     ],
     "projectIds": [1, 2, 3, 4, 5, 6],
     "exitBanner": {
-      "label": "MORE OF OUR WORK →",
+      "label": "MORE PROJECTS →",
       "href": "/work"
     }
   },
@@ -155,43 +163,66 @@
     ]
   },
 
+  "news": [
+    {
+      "id": 1,
+      "title": "Lorem ipsum dolor sit amet",
+      "image": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Lorem ipsum dolor sit amet",
+      "image": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Lorem ipsum dolor sit amet",
+      "image": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lorem ipsum dolor sit amet",
+      "image": {
+        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      }
+    }
+  ],
+
   "approach": {
-    "punchlines": ["Modern experiences.", "Exceptional service.", "Problem solved."],
-    "intro": "Our methodology derived from our broad experinces in creative industry. Based on that experience we defined",
-    "buttonLabel": "Our approach",
-    "exitline": "WE WOULD BE HAPPY TO GIVE YOU MORE  INSIGHTS ABOUT OUR WORK PROCESS",
+    "intro": {
+      "title": "Our work methodology \n derived from broad \n experinces in different fields \n of creative industry. Based \n on that experience we \n created steps that define",
+      "punchline": "Our approach"
+    },
+    "exit": {
+      "description": "We offer structured but flexible working platform. Based on your needs we customize project roadmap through all described steps.",
+      "title": "WE HAVE EXPERTISE THAT EXTENDS \n through BOTH DIGITAL AND ANALOGUE \n DOMAIN. TO FIND OUT MORE ABOUT \n OUR ABILITIES CHECK OUT",
+      "punchline": "Our services",
+      "href": "/services"
+    },
     "steps": [
       {
-        "name": "Research",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
-        "image": {
-          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-        }
+        "number": "./assets/svgs/step3_n.svg",
+        "graphic": "./assets/svgs/step1_graphic.svg",
+        "title": "Listening & learning",
+        "description": "We start by listening. This is very important. By listetning, we learn, about your business, about your needs, about your expectations. We tend to get to know you both on proffesional and human level. With a clear idea, we then define our approach to you and your business. This step is foundation for sucessful project."
       },
       {
-        "name": "Collaboration",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
-        "image": {
-          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-        }
+        "number": "./assets/svgs/step3_n.svg",
+        "graphic": "./assets/svgs/step1_graphic.svg",
+        "title": "Insights & Strategy",
+        "description": "There’s no big ideas, just right ideas. We seek every available information to form right strategic approach for your business. We help you clear  the path to your audience and be recognisable."
       },
       {
-        "name": "Design",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
-        "image": {
-          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-        }
-      },
-      {
-        "name": "Evaluation",
-        "title": "Lorem ipsum dolor sit amet",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit",
-        "image": {
-          "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-        }
+        "number": "./assets/svgs/step3_n.svg",
+        "graphic": "./assets/svgs/step1_graphic.svg",
+        "title": "Execution & Delivery",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ]
   },
@@ -208,7 +239,7 @@
         "offsetTop": 100
       },
       "name": "ELLE MYRA",
-      "intro": "Not Your average \n e-commerce Website",
+      "intro": "Not Your average  \n  e-commerce Website",
       "heroimage": {
         "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
       },
@@ -317,50 +348,32 @@
         "overflow": false,
         "offsetTop": 0
       },
-      "intro": "Online campaign - Swedan \n 19.12 - 30.12.2018",
+      "intro": "Online campaign - Swedan  \n  19.12 - 30.12.2018",
       "heroimage": {
         "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
       },
       "analyticsLayout": true,
       "articles": [
         {
-          "title": "CPC performance \n over time",
-          "columns": [
-            {
-              "markdown": "",
-              "svg": ""
-            },
-            {
-              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
-              "svg": ""
-            }
-          ]
+          "title": "Click/Cost  \n  performance",
+          "graphMd": "",
+          "graphSvg": "",
+          "textMd": "### Comments and conclusions \n During the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget. \n ### CPC optimisation \n Average cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device. \n * # 4.44 \n  Highest CPC per campaign \n  \n  ~ price in EUR \n * # 0.04 \n  Lowest CPC per campaign \n  \n  ~ price in EUR \n ",
+          "textSvg": ""
         },
         {
-          "title": "Click/Cost \n performance",
-          "columns": [
-            {
-              "markdown": "",
-              "svg": ""
-            },
-            {
-              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
-              "svg": ""
-            }
-          ]
+          "title": "Click/Cost  \n  performance",
+          "graphMd": "",
+          "graphSvg": "",
+          "textMd": "### Comments and conclusions \n During the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget. \n ### CPC optimisation \n Average cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device. \n * # 4.44 \n  Highest CPC per campaign \n  \n  ~ price in EUR \n * # 0.04 \n  Lowest CPC per campaign \n  \n  ~ price in EUR \n ",
+          "textSvg": ""
         },
         {
-          "title": "Retargeting audience\n— Social media",
-          "columns": [
-            {
-              "markdown": "",
-              "svg": ""
-            },
-            {
-              "markdown": "### Comments and conclusions\nDuring the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget.\n### CPC optimisation\nAverage cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device.\n* # 4.44\n Highest CPC per campaign\n\n ~ price in EUR\n* # 0.04\n Lowest CPC per campaign\n\n ~ price in EUR\n",
-              "svg": ""
-            }
-          ]
+          "title": "Click/Cost  \n  performance",
+          "graphMd": "",
+          "graphSvg": "",
+          "textMd": "### Comments and conclusions \n During the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget. \n ### CPC optimisation \n Average cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device. \n * # 4.44 \n  Highest CPC per campaign \n  \n  ~ price in EUR \n * # 0.04 \n  Lowest CPC per campaign \n  \n  ~ price in EUR \n ",
+          "textSvg": ""
         }
       ],
       "relatedProjects": {

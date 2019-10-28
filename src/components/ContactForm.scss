@@ -1,7 +1,7 @@
 @import '../index.scss';
 
 .contact-form__wrapper {
-  margin: 50px 5vw 20vh; 
+  padding: 50px 5vw 20vh; 
 }
 
 .contact-form__intro {
@@ -39,7 +39,7 @@
     min-width: 100%;
     height: 80px;
     min-height: 80px;
-    transition: min-height .5s ease-out;
+    transition: min-height .3s ease-out;
 
     &:focus {
       min-height: 200px;
@@ -67,9 +67,20 @@
   @media screen and (min-width: $screen-xl) {
     min-height: 360px;
 
+    textarea:focus {
+      min-height: 300px;
+    }
+
     .contact-form__bottom,
     textarea {
       min-height: 180px;
+    }
+
+    .contact-form__bottom {
+      input,
+      button {
+        padding-left: 40px;
+      }
     }
   }
 }
