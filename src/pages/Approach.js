@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import ContactForm from '../components/ContactForm';
 import Image from '../components/Image';
 import AnimatedTextBanner from '../components/TextBanner';
-import './Approach.scss';
 
 import data from '../data.json'
 
@@ -17,12 +16,12 @@ const Approach = () => {
       <AnimatedTextBanner
         { ...intro }
         isDown
-        className="approach__intro mx"
+        className="approach__intro mx mb-0"
         titleClass="t-uppercase"
         onClick={ () => stepsEl.current.scrollIntoView({ behavior: 'smooth' })}
       />
 
-      <section ref={ stepsEl } className="approach__steps">
+      <section ref={ stepsEl } className="approach__steps pt">
         { steps.map(({ number, title, description, graphic }) => (
           <section key={ title } className="approach__step">
             <div className="step__text mx">
@@ -38,7 +37,7 @@ const Approach = () => {
               </div>
             </div>
             <Image
-              src={ graphic }
+              image={ { src: graphic } }
               alt={ title }
               baseClass="step"
               classAddition="mx"

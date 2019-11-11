@@ -1,0 +1,25 @@
+//shared
+@import './shared.scss';
+@import './components/Footer.scss';
+@import './components/Header.scss';
+@import './components/Navigation.scss';
+
+//pages
+@import './pages/About.scss';
+@import './pages/Approach.scss';
+@import './pages/Contact.scss';
+@import './pages/Home.scss';
+@import './pages/Project.scss';
+@import './pages/Work.scss';
+
+//components
+@import './components/Button.scss';
+@import './components/Arrow.scss';
+@import './components/Image.scss';
+@import './components/AnalyticsArticle.scss';
+@import './components/AnimatedText.scss';
+@import './components/ContactForm.scss';
+@import './components/DesignArticle.scss';
+@import './components/ProjectsList.scss';
+@import './components/RelatedProjectLink.scss';
+@import './components/RoloBanner.scss';

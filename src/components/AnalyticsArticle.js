@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from './Markdown';
-import './AnalyticsArticle.scss';
 
 const AnalyticsArticle = ({ title, graphMd, graphSvg, textMd, textSvg, index }) => {
   return (

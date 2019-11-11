@@ -6,7 +6,6 @@ import ContactForm from '../components/ContactForm';
 import ProjectsList from '../components/ProjectsList';
 import Logo from '../components/Logo';
 import Image from '../components/Image';
-import './Home.scss'
 
 import data from '../data.json'
 
@@ -36,11 +35,11 @@ const Home = () => {
         </div>
 
         <section className="home__intro">
-          <div className="t-md">{ intro.heading }</div>
+          <div className="t-sm">{ intro.heading }</div>
           <div className="t-lg t-punch t-uppercase">{ intro.punchline }</div>
         </section>
 
-        <section className="home__links">
+        <section className="home__links mx mb-4">
           { links.map(({ heading, label, arrow, href }) => (
             <Button
               key={ label }
@@ -53,7 +52,7 @@ const Home = () => {
                 }
               }}
             >
-              <div className="t-md t-light">{ heading }</div>
+              <div className="t-sm t-light">{ heading }</div>
               <div className="t-uppercase t-lg t-punch t-uppercase">
                 { label } 
                 { arrow &&
@@ -67,7 +66,7 @@ const Home = () => {
         </section>
 
         <div ref={ projectsEl }>
-          <ProjectsList projectIds={ projectIds } projects={ projects } />
+          <ProjectsList projects={ projects } />
         </div>
 
         <RoloBanner { ...exitBanner } />
@@ -77,7 +76,7 @@ const Home = () => {
             { news.slice(0,3).map(({ id, image, title }) => (
               <Link key={ id } to={ `news/${id}` }>
                 <div className="news-link">
-                  <Image src={ image.src } classAddition="mb-2" alt={ title } />
+                  <Image image={ image } classAddition="mb-2" alt={ title } />
                   <div className="t-md news-link__text">
                     <span className="d-lg-none">{ title }&nbsp;→</span>
                     <span className="d-none d-lg-inline-block">
@@ -90,7 +89,7 @@ const Home = () => {
             )) }
           </div>
           <Link to='/news'>
-            <div className="t-md t-light">Keep up with us</div>
+            <div className="t-sm t-light">Keep up with us</div>
             <div className="t-uppercase t-lg t-punch t-uppercase">
               More news
               <span className="arrow bounce-x">→</span>

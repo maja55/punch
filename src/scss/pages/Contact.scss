@@ -1,0 +1,7 @@
+.contact__intro {
+  max-width: 80%;
+
+  @media screen and (min-width: $screen-sm) {
+    max-width: 60%;
+  }
+}

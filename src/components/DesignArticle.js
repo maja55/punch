@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from './Image';
-import './DesignArticle.scss'
 
 const DesignArticle = ({ text, image, secImage, isFlipped }) => {
   return (
@@ -15,14 +14,14 @@ const DesignArticle = ({ text, image, secImage, isFlipped }) => {
         <div
           className={ `article__image ${image.overflow ? 'overflow' : 'no-overflow'}${secImage ? ' article__image--first' : ''}` }
           style={ { width: `${image.width}%`} }>
-          <Image classAddition="w-100" src={ image.src } />
+          <Image classAddition="w-100" image={ image } />
         </div>
       }
       { secImage &&
         <div
           className={ `article__image ${secImage.overflow ? 'overflow' : 'no-overflow'}${secImage ? ' article__image--second' : ''}` }
           style={ { width: `${secImage.width}%`} }>
-          <Image classAddition="w-100" src={ secImage.src } />
+          <Image classAddition="w-100" image={ secImage } />
         </div>
       }
     </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Button from './Button'
-import './Navigation.scss'
 
 const Navigation = ({ email, isOpen, navigationLinks, socialLinks, toggleMenu }) => (
   <aside className={ `menu bg-dark${isOpen ? ' open revealed' : ''}`}>

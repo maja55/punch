@@ -1,0 +1,116 @@
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding-top: 40px;
+}
+
+.projects-list__project {
+  @extend section;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  position: relative;
+
+  footer {
+    max-width: 60%;
+  }
+
+  &:nth-child(8n + 1) {
+    max-width: 35%;
+    margin-top: 150px;
+  }
+
+  &:nth-child(8n + 2) {
+    max-width: 50%;
+    margin-right: 0;
+  }
+
+  &:nth-child(8n + 3) {
+    max-width: 45%;
+  }
+
+  &:nth-child(8n + 4) {
+    max-width: 35%;
+    margin-top: 270px;
+  }
+
+  &:nth-child(8n + 5) {
+    max-width: 30%;
+    margin-top: 80px;
+  }
+
+  &:nth-child(8n + 6) {
+    max-width: 55%;
+    margin-right: 0;
+  }
+
+  &:nth-child(8n + 7) {
+    max-width: 50%;
+    margin-left: 0;
+    margin-top: 120px;
+  }
+
+  &:nth-child(8n) {
+    max-width: 35%;
+  }
+}
+
+.projects-list__project-name {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.projects-list__project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  
+  span {
+    white-space: nowrap;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: $screen-lg - 1) {
+  .projects-list__project footer {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .projects-list__project {
+    margin-top: 0 !important;
+
+    &:nth-child(8n + 1),
+    &:nth-child(8n + 4),
+    &:nth-child(8n) {
+      max-width: 65%;
+    }
+
+    &:nth-child(8n + 2),
+    &:nth-child(8n + 7) {
+      max-width: 95%;
+    }
+
+    &:nth-child(8n + 3) {
+      max-width: 85%;
+    }
+
+    &:nth-child(8n + 5) {
+      max-width: 55%;
+    }
+
+    &:nth-child(8n + 6) {
+      max-width: 100%;
+    }
+  }
+
+  .projects-list__project-name {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+}

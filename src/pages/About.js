@@ -2,12 +2,11 @@ import React from 'react';
 import ContactForm from '../components/ContactForm';
 import RoloBanner from '../components/RoloBanner';
 import Image from '../components/Image';
-import './About.scss';
 
 import data from '../data.json'
 
 const About = () => {
-  const { punchlines, title, text, image, topics, topicsTitle, exitBanner } = data.about;
+  const { punchlines, title, text, heroimage, image, topics, topicsTitle, exitBanner } = data.about;
 
   return (
     <div className="page about pt">
@@ -18,7 +17,7 @@ const About = () => {
       </section>
 
       <section>
-        <Image baseClass="about-intro" src={ image.src } alt="contact" />
+        <Image baseClass="about-intro" image={ heroimage } alt="contact" />
       </section>
 
       <section className="about__intro mx">
@@ -27,7 +26,7 @@ const About = () => {
       </section>
 
       <section className="about__image mx">
-        <Image src={ image.src } alt="contact" />
+        <Image image={ image } alt="contact" />
       </section>
 
       <section className="about__topics mx">

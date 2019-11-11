@@ -65,7 +65,7 @@ const withOnScrollAnimation = (Component) => {
     WithOnScrollClass.defaultProps = {
         revealClass: 'revealed',
         baseClass: 'reveal',
-        rootMargin: '10px',
+        rootMargin: '30px',
         threshold: 0,
         callback: null,
     };

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import Button from './Button'
-import './ContactForm.scss';
 
 import data from '../data.json'
 
@@ -15,11 +14,11 @@ const ContactForm = ({ full }) => {
   }
 
   return (
-    <div className="t-md contact-form__wrapper">
+    <div className="contact-form__wrapper">
       { full &&
         <div>
           <Button onClick={ () => ref.current.focus() }>
-            <div className="contact-form__intro">
+            <div className="contact-form__intro t-sm">
               <p>{ form.intro }</p>
               <p>{ form.focusline }
                 <span className='arrow bounce-y'>↓</span>
@@ -27,7 +26,7 @@ const ContactForm = ({ full }) => {
             </div>
           </Button>
 
-          <form className="contact-form" autoComplete="off" onSubmit={ onSubmit }>
+          <form className="contact-form t-md" autoComplete="off" onSubmit={ onSubmit }>
             <textarea className="t-md" type="text" name="text" ref={ ref } required style={{}} />
             <div className="contact-form__bottom">
               <input
@@ -46,18 +45,18 @@ const ContactForm = ({ full }) => {
               </Button>
             </div>
           </form>
+
+          <p className="t-sm">{ email.intro }</p>
+
         </div>
       }
 
-      <div className="">
-        <p>{ email.intro }</p>
-        <Button
-          className="t-lg t-punch"
-          href={ `mailto:${email.address}` }
-        >
-          { email.address }
-        </Button>
-      </div>
+      <Button
+        className="t-lg t-punch"
+        href={ `mailto:${email.address}` }
+      >
+        { email.address }
+      </Button>
 
     </div>
   );

@@ -22,13 +22,18 @@ const App = () => {
   const [animate, setAnimation] = useState(() => false);
   const [animating, startAnimation] = useState(() => false);
   const [scrollTop, setScrollTop] = useState(() => 0);
+  const isAnimating = useRef(false);
+  const shouldAnimate = useRef(false);
   const pageEl = useRef(null);
 
   const toggleMenu = (open) => {
     if (open) {
+      const offset = window.scrollY;
       setScrollTop(window.scrollY)
+      document.body.style.marginTop = `${offset}px`;
       document.body.classList.add('scrollLock');
     } else {
+      document.body.style.marginTop = 0;
       document.body.classList.remove('scrollLock');
 
       if (scrollTop) {
@@ -41,15 +46,29 @@ const App = () => {
   }
 
   const handleScroll = () => {
+    document.body.classList.add('scrollLock');
     startAnimation(true)
-    setTimeout(() => { setAnimation(false) }, 1000)
+    isAnimating.current = true;
+
+    setTimeout(() => { 
+      setAnimation(false)
+      shouldAnimate.current = false;
+      document.body.classList.remove('scrollLock');
+    }, 1000)
+
     window.removeEventListener('scroll', handleScroll);
   }
 
   useEffect(() => {
     if (!isLoaded && !animate && !isMenuOpen && location.pathname === '/' && !location.hash) {
       setAnimation(true)
+      shouldAnimate.current = true;
       window.addEventListener('scroll', handleScroll);
+
+      // animate after 4 sec if user didn't trigger animation by scrolling
+      setTimeout(() => {
+        if (shouldAnimate.current && !isAnimating.current) handleScroll()
+      }, 3500)
     }
     if (!isLoaded) setLoaded(true)
     if(isMenuOpen) toggleMenu(false)

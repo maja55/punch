@@ -4,27 +4,27 @@
     { 
       "label": "work",
       "href": "/work",
-      "symbol": "./assets/svgs/symbol_work.svg"
+      "symbol": "/assets/svgs/symbol_work.svg"
     },{ 
       "label": "approach",
       "href": "/approach",
-      "symbol": "./assets/svgs/symbol_approach.svg"
+      "symbol": "/assets/svgs/symbol_approach.svg"
     },{ 
       "label": "services",
       "href": "/services",
-      "symbol": "./assets/svgs/symbol_services.svg"
+      "symbol": "/assets/svgs/symbol_services.svg"
     },{ 
       "label": "about",
       "href": "/about",
-      "symbol": "./assets/svgs/symbol_about.svg"
+      "symbol": "/assets/svgs/symbol_about.svg"
     },{ 
       "label": "news",
       "href": "/news",
-      "symbol": "./assets/svgs/symbol_news.svg"
+      "symbol": "/assets/svgs/symbol_news.svg"
     },{ 
       "label": "contact",
       "href": "/contact",
-      "symbol": "./assets/svgs/symbol_contact.svg"
+      "symbol": "/assets/svgs/symbol_contact.svg"
     }
   ],
   "socialLinks": [
@@ -55,15 +55,15 @@
       "intro": "Or just email us",
       "address": "hello@itspunch.com"
     },
-    "image": {
-      "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+    "heroimage": {
+      "src": "https://via.placeholder.com/1440x720.jpeg/555555"
     }
   },
 
   "home": {
     "video": {
-      "url": "https://storage.googleapis.com/example_test_1/europe-west4/SampleVideo_1280x720_1mb.mp4",
-      "posterUrl": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      "url": "/assets/video/Elle_Myra.mp4",
+      "posterUrl": ""
     },
     "intro": {
       "heading": "Punch is a business partner for ambitious brands.",
@@ -102,8 +102,11 @@
     "punchlines": ["Modern experiences.", "Exceptional service.", "Problem solved."],
     "title": "A holistic approach",
     "text": "It´s the sum of all interactions that constitute the experience of a brand. We therefore need to understand the entire brand ecosphere and anticipate future needs among the intended users, to be able to cater for seamless interactions across all touchpoints.",
+    "heroimage": {
+      "src": "https://via.placeholder.com/1440x720.jpeg/555555"
+    },
     "image": {
-      "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+      "src": "https://via.placeholder.com/1200x720.jpeg/555555"
     },
     "exitBanner": {
       "label": "SEE OUR WORK →",
@@ -168,28 +171,28 @@
       "id": 1,
       "title": "Lorem ipsum dolor sit amet",
       "image": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/407x472.jpeg/555555"
       }
     },
     {
       "id": 2,
       "title": "Lorem ipsum dolor sit amet",
       "image": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/407x472.jpeg/555555"
       }
     },
     {
       "id": 3,
       "title": "Lorem ipsum dolor sit amet",
       "image": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/407x472.jpeg/555555"
       }
     },
     {
       "id": 4,
       "title": "Lorem ipsum dolor sit amet",
       "image": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/407x472.jpeg/555555"
       }
     }
   ],
@@ -207,20 +210,20 @@
     },
     "steps": [
       {
-        "number": "./assets/svgs/step3_n.svg",
-        "graphic": "./assets/svgs/step1_graphic.svg",
+        "number": "/assets/svgs/step3_n.svg",
+        "graphic": "/assets/svgs/step1_graphic.svg",
         "title": "Listening & learning",
         "description": "We start by listening. This is very important. By listetning, we learn, about your business, about your needs, about your expectations. We tend to get to know you both on proffesional and human level. With a clear idea, we then define our approach to you and your business. This step is foundation for sucessful project."
       },
       {
-        "number": "./assets/svgs/step3_n.svg",
-        "graphic": "./assets/svgs/step1_graphic.svg",
+        "number": "/assets/svgs/step3_n.svg",
+        "graphic": "/assets/svgs/step1_graphic.svg",
         "title": "Insights & Strategy",
         "description": "There’s no big ideas, just right ideas. We seek every available information to form right strategic approach for your business. We help you clear  the path to your audience and be recognisable."
       },
       {
-        "number": "./assets/svgs/step3_n.svg",
-        "graphic": "./assets/svgs/step1_graphic.svg",
+        "number": "/assets/svgs/step3_n.svg",
+        "graphic": "/assets/svgs/step1_graphic.svg",
         "title": "Execution & Delivery",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
@@ -231,17 +234,37 @@
   "projects": [
     {
       "id": 1,
+      "name": "DANUBE DESIGN \n DISTRICT",
+      "tags": ["Branding", "Web design"],
+      "thumbnail": {
+        "src": "/assets/images/group-copy@2x.jpg",
+        "imageS": "/assets/images/group-copy.jpg",
+        "imageM": "/assets/images/group-copy@2x.jpg",
+        "imageL": "/assets/images/group-copy@3x.jpg"
+      },
+      "intro": "Some intro",
+      "heroimage": {
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
+      }
+    }, {
+      "id": 2,
+      "name": "ELLE MYRA",
       "tags": ["Branding", "Digital Marketing", "Analytics"],
       "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 35,
-        "overflow": false,
-        "offsetTop": 100
+        "src": "/assets/images/elle-myra-key-visual-gif@2x.jpg",
+        "imageS": "/assets/images/elle-myra-key-visual-gif.jpg",
+        "imageM": "/assets/images/elle-myra-key-visual-gif@2x.jpg",
+        "imageL": "/assets/images/elle-myra-key-visual-gif@3x.jpg"
       },
-      "name": "ELLE MYRA",
       "intro": "Not Your average  \n  e-commerce Website",
       "heroimage": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
       },
       "analyticsLayout": false,
       "articles": [
@@ -252,7 +275,7 @@
           }
         }, {
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/1200x720.jpeg/555555",
             "width": 90,
             "overflow": false
           }
@@ -261,7 +284,7 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/540x540.jpeg/555555",
             "width": 40,
             "overflow": false
           }
@@ -272,24 +295,24 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/900x780.jpeg/555555",
             "width": 60,
             "overflow": true
           }
         }, {
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/1440x840.jpeg/555555",
             "width": 100,
             "overflow": true
           }
         }, {
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/600x840.jpeg/555555",
             "width": 45,
             "overflow": false
           },
           "secImage": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/600x720.jpeg/555555",
             "width": 45,
             "overflow": true
           }
@@ -298,59 +321,34 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/900x600.jpeg/555555",
             "width": 60,
             "overflow": true
           }
         }, {
           "image": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
+            "src": "https://via.placeholder.com/1200x720.jpeg/555555",
             "width": 90,
             "overflow": false
           }
         }
-      ],
-      "relatedProjects": {
-        "previous": { 
-          "id": 0,
-          "name": "We do I do",
-          "thumbnail": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-          },
-          "href": "http://www.stevenzuber.com/"
-        },
-        "next": { 
-          "id": 3,
-          "name": "Dib hotel",
-          "thumbnail": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-          }
-        }
-      }
-    }, {
-      "id": 2,
-      "name": "Test project 3",
-      "tags": ["Branding", "Analytics"],
-      "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 50,
-        "overflow": true,
-        "offsetTop": 0
-      },
-      "href": "http://www.stevenzuber.com/"
-    }, {
+      ]
+    },  {
       "id": 3,
-      "tags": ["Analytics"],
+      "tags": ["Branding", "Web Design", "Analytics", "Digital Marketing"],
       "name": "Dib hotel",
       "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 45,
-        "overflow": false,
-        "offsetTop": 0
+        "src": "/assets/images/dib-wall-mockup-2-copy@2x.jpg",
+        "imageS": "/assets/images/dib-wall-mockup-2-copy.jpg",
+        "imageM": "/assets/images/dib-wall-mockup-2-copy@2x.jpg",
+        "imageL": "/assets/images/dib-wall-mockup-2-copy@3x.jpg"
       },
       "intro": "Online campaign - Swedan  \n  19.12 - 30.12.2018",
       "heroimage": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
       },
       "analyticsLayout": true,
       "articles": [
@@ -375,53 +373,54 @@
           "textMd": "### Comments and conclusions \n During the campaign we have worked on daily CPC decrease to get as many clicks as possible for available budget. As the result of campaign optimisation we have recorded CPC drop of almost x10 times or 9.875% during the 10 days period.  Presented graph is showing daily average CPC for Swedish market for all campaigns in total. Since daily average CPC dropped we were able to boost campaign performance with similar daily budget. \n ### CPC optimisation \n Average cost per click decrease was achieved through series of campaign optimisations.  Most effective step was bid adjustment per device. \n * # 4.44 \n  Highest CPC per campaign \n  \n  ~ price in EUR \n * # 0.04 \n  Lowest CPC per campaign \n  \n  ~ price in EUR \n ",
           "textSvg": ""
         }
-      ],
-      "relatedProjects": {
-        "previous": { 
-          "id": 1,
-          "name": "ELLE MYRA",
-          "thumbnail": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-          }
-        },
-        "next": { 
-          "id": 4,
-          "name": "Zuber web",
-          "thumbnail": {
-            "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg"
-          },
-          "href": "http://www.stevenzuber.com/"
-        }
-      }
+      ]
     }, {
       "id": 4,
-      "name": "Test project 4",
-      "tags": ["Web Design"],
+      "name": "We do I do",
+      "tags": ["Web Design", "Branding"],
       "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 35,
-        "overflow": false,
-        "offsetTop": 150
+        "src": "/assets/svgs/group-2-copy.svg"
+      },
+      "intro": "Some intro",
+      "heroimage": {
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
       }
     }, {
       "id": 5,
-      "name": "Test project 5",
-      "tags": ["Branding"],
+      "name": "STEVEN ZUBER",
+      "tags": ["Branding", "Web Design"],
       "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 30,
-        "overflow": false,
-        "offsetTop": 80
+        "src": "https://via.placeholder.com/500x666.jpeg/555555",
+        "imageS": "https://via.placeholder.com/432x576.jpeg/555555",
+        "imageM": "https://via.placeholder.com/500x666.jpeg/555555",
+        "imageL": "https://via.placeholder.com/600x800.jpeg/555555"
+      },
+      "intro": "Some intro",
+      "heroimage": {
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
       }
     }, {
       "id": 6,
-      "name": "Test project 6",
-      "tags": ["Analytics"],
+      "name": "OSNAP ARCHITECTS",
+      "tags": ["Branding", "Web Design"],
       "thumbnail": {
-        "src": "http://www.rankcatalyst.us/img/fashion-web-design1.jpg",
-        "width": 55,
-        "overflow": true,
-        "offsetTop": 0
+        "src": "/assets/images/cardboard-tube-packaging-osnap-copy@2x.jpg",
+        "imageS": "/assets/images/cardboard-tube-packaging-osnap-copy.jpg",
+        "imageM": "/assets/images/cardboard-tube-packaging-osnap-copy@2x.jpg",
+        "imageL": "/assets/images/cardboard-tube-packaging-osnap-copy@3x.jpg"
+      },
+      "intro": "Some intro",
+      "heroimage": {
+        "src": "https://via.placeholder.com/1440x840.jpeg/555555"
+      },
+      "relatedimage": {
+        "src": "https://via.placeholder.com/600x478.jpeg/555555"
       }
     }
   ]

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Image from '../components/Image';
 import withOnScrollAnimation from '../components/WithOnScrollAnimation'
-import './ProjectsList.scss'
 
 const ProjectThumbnail = ({ id, name, tags, thumbnail, href }) => {
   const AnchorTag = href ? 'a' : Link;
@@ -12,7 +11,7 @@ const ProjectThumbnail = ({ id, name, tags, thumbnail, href }) => {
   return (
     <AnchorTag { ...anchorProps }>
       <div>
-        <Image src={ thumbnail.src } alt={ name } />
+        <Image image={ thumbnail } alt={ name } />
         <footer>
           <Button className="projects-list__project-name t-md">
               <span className="t-uppercase d-lg-none">{ name }&nbsp;→</span>
@@ -34,27 +33,18 @@ const ProjectThumbnail = ({ id, name, tags, thumbnail, href }) => {
   )
 }
 
-const ProjectsList = ({ projects, projectIds, activeFilter }) => {
+const ProjectsList = ({ projects }) => {
+  const ProjectThumbWithOnScrollAnimation = withOnScrollAnimation(ProjectThumbnail)
+
   return (
     <div className="projects-list" id="projects">
-      { projects.map((project) => {
-        if (projectIds && projectIds.indexOf(project.id) === -1) return null
-
-        const hide = activeFilter && project.tags.indexOf(activeFilter) === -1;
-        const ProjectThumbWithOnScrollAnimation = withOnScrollAnimation(ProjectThumbnail)
-        const { width, overflow, offsetTop } = project.thumbnail;
-        const baseClass = `fade-in-up projects-list__project w-${width}${overflow ? ' overflow' : ''}${hide ? ' hidden' : ''}`;
-        const style= { marginTop: `${offsetTop}px` }
-
-        return (
-          <ProjectThumbWithOnScrollAnimation
-            { ...project }
-            key={ project.id }
-            baseClass={ baseClass }
-            style={ style }
-          />
-        )
-      })}
+      { projects.map((project) => (
+        <ProjectThumbWithOnScrollAnimation
+          { ...project }
+          key={ project.id }
+          baseClass="fade-in-up projects-list__project"
+        />
+      ))}
     </div>
   );
 }

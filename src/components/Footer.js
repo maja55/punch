@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from './Button';
-import './Footer.scss';
 
 const Footer = ({ copyright, socialLinks }) => {
   return (

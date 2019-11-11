@@ -1,5 +1,4 @@
 import React from 'react';
-import './Arrow.scss';
 
 const Arrow = ({ className, isRight, isLeft }) => (
   <svg

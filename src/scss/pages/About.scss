@@ -1,0 +1,32 @@
+.about__intro {
+  max-width: 75%;
+}
+
+.topics {
+  margin-left: auto;
+  columns: 2 260px;
+  column-gap: 5vw;
+  max-width: calc(560px + 5vw);
+}
+
+.topics__section {
+  display: inline-block;
+  min-width: 280px;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .about__topics {
+    display: flex;
+
+    h2 {
+      white-space: nowrap;
+      padding-right: 5vw;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .about__intro {
+    max-width: 45%;
+  }
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Button from './Button'
 import Logo from './Logo'
-import './Header.scss';
 
 const Header = ({ toggleMenu, isMenuOpen, animateIntro, intro, shouldAnimate }) => (
   <header className={ `header${animateIntro ? ' will-animate' : ''}${shouldAnimate ? ' animated' : ''}` }>

@@ -1,0 +1,51 @@
+@keyframes roll {
+  100% { transform: translateX(66.66%); }
+}
+
+.rolo-banner {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.rolo-banner > a {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: roll 10s linear infinite;
+  white-space: nowrap;
+}
+
+.rolo-banner__label {
+  display: inline-block;
+  width: 100vw;
+  text-align: center;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .rolo-banner__label {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .rolo-banner {
+    height: 150px;
+  }
+
+  .rolo-banner a {
+    animation-duration: 15s;
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .rolo-banner {
+    height: 200px;
+  }
+}

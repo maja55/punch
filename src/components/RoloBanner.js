@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './RoloBanner.scss';
 
 const RoloBanner = ({ label, href }) => (
   <section className="rolo-banner">

@@ -1,0 +1,36 @@
+.work__intro {
+  margin-bottom: 10vw;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.work__filters {
+  display: flex;
+  flex-direction: column;
+}
+
+.work__title {
+  margin-top: 20px;
+}
+
+.work__title,
+.work__filters {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.work__filter {
+  padding: 3px 0;
+}
+
+@media screen and (min-width: $screen-sm) {
+  .work__intro {
+    margin-bottom: 7vw;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .work__title {
+    margin-top: -10px;
+  }
+}

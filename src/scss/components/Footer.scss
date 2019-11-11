@@ -1,0 +1,45 @@
+.footer {
+  padding: 0 5vw 30px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  .arrow {
+    margin-right: 10px;
+  }
+}
+
+.footer__socialLink {
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: $screen-md) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .footer__socialLinks {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__socialLink {
+    margin: 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
