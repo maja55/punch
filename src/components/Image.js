@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CloudinaryImage from './CloudinaryImage'
 
 const Image = ({ baseClass, classAddition, image={}, alt }) => (
   <img
@@ -28,6 +29,23 @@ Image.propTypes = {
   }).isRequired,
   alt: PropTypes.string,
   baseClass: PropTypes.string,
+}
+
+
+export const LazyImage = ({ alt, baseClass, classAddition, widthShare=1, step=350, image='pdi5rye4psrysfqdhzng' }) => {
+  const onLoad = () => console.log('loaded')
+  return(
+    <div className={ `${baseClass}__image ${classAddition}` } id="image">
+      <CloudinaryImage
+        alt={ alt }
+        imageName={ image }
+        fluid={{ maxWidth: 3500 * widthShare, step, widthShare }}
+        quality="good"
+        style={{ width: `${widthShare * 100}vw` }}
+        onLoad={ onLoad }
+      />
+    </div>
+  )
 }
 
 export default Image;

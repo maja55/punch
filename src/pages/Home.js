@@ -5,7 +5,7 @@ import RoloBanner from '../components/RoloBanner';
 import ContactForm from '../components/ContactForm';
 import ProjectsList from '../components/ProjectsList';
 import Logo from '../components/Logo';
-import Image from '../components/Image';
+import Image, { LazyImage } from '../components/Image';
 
 import data from '../data.json'
 
@@ -13,7 +13,7 @@ const getArrowAxis = (arrow) => arrow === "↑" || arrow === "↓" ? "y" : 'x';
 
 const Home = () => {
   const projectsEl = useRef()
-  const { projects, news, home: { video, intro, links, projectIds, exitBanner } } = data;
+  const { projects, news, home: { video, intro, links, projectIds, exitBanner } } = data
 
   return (
     <div className="page home">
@@ -64,6 +64,8 @@ const Home = () => {
             </Button>
           ))}
         </section>
+
+        <LazyImage widthShare={ 0.5 } />
 
         <div ref={ projectsEl }>
           <ProjectsList projects={ projects } />

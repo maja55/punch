@@ -7,12 +7,15 @@
   margin-bottom: 30px;
 }
 
+.contact-form__mb {
+  margin-bottom: 80px;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   min-height: 240px;
   border: 1px solid $light;
-  margin-bottom: 80px;
 
   textarea,
   input {

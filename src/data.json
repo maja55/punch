@@ -49,11 +49,15 @@
       "intro": "We’d like to hear from you!",
       "focusline": "Drop a line or two",
       "emailPlaceholder": "YOUR EMAIL",
-      "submit": "Submit"
+      "submit": "Submit",
+      "sending": "Sending...",
+      "success": "Email sent. Thank you for reaching out!",
+      "error": "Ups! Email not sent. Please and provide vaild email address and check your network connection."
     },
     "email": {
       "intro": "Or just email us",
-      "address": "hello@itspunch.com"
+      "address": "hello@itspunch.com",
+      "subject": "Hello Punch"
     },
     "heroimage": {
       "src": "https://via.placeholder.com/1440x720.jpeg/555555"
@@ -254,10 +258,7 @@
       "name": "ELLE MYRA",
       "tags": ["Branding", "Digital Marketing", "Analytics"],
       "thumbnail": {
-        "src": "/assets/images/elle-myra-key-visual-gif@2x.jpg",
-        "imageS": "/assets/images/elle-myra-key-visual-gif.jpg",
-        "imageM": "/assets/images/elle-myra-key-visual-gif@2x.jpg",
-        "imageL": "/assets/images/elle-myra-key-visual-gif@3x.jpg"
+        "src": "https://res.cloudinary.com/maja55/image/upload/v1573470964/jmutdymkvl9ugq7dekgv.jpg"
       },
       "intro": "Not Your average  \n  e-commerce Website",
       "heroimage": {

@@ -10,7 +10,8 @@
 
 # production
 /build
-/pubilc/assets
+/pubilc/assets/images
+/pubilc/assets/video
 
 # misc
 .DS_Store
