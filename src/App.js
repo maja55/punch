@@ -11,12 +11,13 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import Project from './pages/Project';
 import Arrow from './components/Arrow';
+import { fetchApi } from './utils';
 
-import data from './data.json'
-
+export const ContactContext = React.createContext({});
 
 const App = () => {
   let location = useLocation();
+  const [data, setData] = useState();
   const [isMenuOpen, openMenu] = useState(() => false);
   const [isLoaded, setLoaded] = useState(() => false);
   const [animate, setAnimation] = useState(() => false);
@@ -72,7 +73,22 @@ const App = () => {
     }
     if (!isLoaded) setLoaded(true)
     if(isMenuOpen) toggleMenu(false)
-  }, [location, animate]);
+
+    // fetch shared data
+    async function fetchData() {
+      try {
+        const endpoints = [ '/navigationlinks', '/sociallinks', '/labels'];
+        const [ navigationLinks, socialLinks, labels ] = await Promise.all(endpoints.map((url) => fetchApi({ url })))
+        setData({ navigationLinks, socialLinks, ...labels[0] });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  if (!data) return null;
 
   return (
     <div
@@ -92,39 +108,41 @@ const App = () => {
         isOpen={ isMenuOpen }
         navigationLinks={ data.navigationLinks }
         socialLinks={ data.socialLinks }
-        email={ data.contact.email.address }
+        email={ data.contact && data.contact.emailAddress }
         toggleMenu={ () => toggleMenu(!isMenuOpen) }
       />
 
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/work">
-          <Work />
-        </Route>
-        <Route path="/approach">
-          <Approach />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/project/:id">
-          <Project/>
-        </Route>
-        <Route path="/news/">
-          <div/>
-        </Route>
-        <Route path="/news/:id">
-          <div/>
-        </Route>
-        <Route path="/services">
-          <div/>
-        </Route>
-      </Switch>
+      <ContactContext.Provider value={ data.contact }>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/work">
+            <Work />
+          </Route>
+          <Route path="/approach">
+            <Approach />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/project/:id">
+            <Project/>
+          </Route>
+          <Route path="/news/">
+            <div/>
+          </Route>
+          <Route path="/news/:id">
+            <div/>
+          </Route>
+          <Route path="/services">
+            <div/>
+          </Route>
+        </Switch>
+      </ContactContext.Provider>
 
       <Footer
         copyright={ data.copyright }

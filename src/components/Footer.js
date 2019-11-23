@@ -6,10 +6,10 @@ const Footer = ({ copyright, socialLinks }) => {
     <footer className="footer">
       <p className="footer__socialLinks">
         <span className="arrow">→</span>
-        { socialLinks.map(({ label, href }) => (
+        { socialLinks.map(({ label, link }) => (
           <Button
             className="footer__socialLink"
-            href={ href }
+            href={ link }
             target="_blank"
             rel="noopener"
             key={ label }

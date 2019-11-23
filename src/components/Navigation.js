@@ -7,13 +7,13 @@ const Navigation = ({ email, isOpen, navigationLinks, socialLinks, toggleMenu })
     <nav className="menu__wrapper">
 
       <ul className="menu__navLinks text--animated t-punch t-lg t-uppercase">
-        { navigationLinks.map(({ label, href, symbol }, i) => (
+        { navigationLinks.map(({ label, pathname }, i) => (
           <li key={ label } className="text-mask inline-img__wrapper menu__navLink">
             <span className="text-content" style={{ transitionDelay: `${i * 0.1}s` }}>
               <span className="menu__navLinkSymbol inline-img">
-                <img src={ symbol } alt="☺" />
+                <img src={ `/assets/svgs/symbol_${pathname}.svg` } alt="☺" />
               </span>
-              <Link to={ href } onClick={ toggleMenu }>{ label }</Link>
+              <Link to={ `/${pathname}` } onClick={ toggleMenu }>{ label }</Link>
             </span>
           </li>
         )) }
@@ -28,10 +28,10 @@ const Navigation = ({ email, isOpen, navigationLinks, socialLinks, toggleMenu })
             { email }
           </span>
         </Button>
-        { socialLinks.map(({ label, href }, i) => (
+        { socialLinks.map(({ label, link }, i) => (
           <Button
             className="menu__socialLink text-mask d-table"
-            href={ href }
+            href={ link }
             target="_blank"
             rel="noopener"
             key={ label }

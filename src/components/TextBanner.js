@@ -3,10 +3,11 @@ import { SplitText } from '../components/AnimatedText';
 import withOnScrollAnimation from '../components/WithOnScrollAnimation';
 import Button from '../components/Button';
 
-export const TextBanner = ({ className, title, titleClass, punchline, punchlineClass, onClick, href, isDown, arrowClass }) => (
+export const TextBanner = ({ className, title, description, titleClass, punchline, punchlineClass, onClick, href, isDown, arrowClass }) => (
   <section className={ className }>
     <div className="t-lg">
-      <SplitText text={ title } className={ titleClass } />
+      { title && <SplitText text={ title } className={ titleClass } /> }
+      { description && <SplitText text={ description } className={ titleClass } /> }
       <Button
         className="t-punch t-uppercase delay"
         onClick={ onClick }

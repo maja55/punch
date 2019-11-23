@@ -7,7 +7,7 @@ export const SplitText = ({ content, text, className }) => {
   return (
     <div className={ `text--animated ${className}` }>
       { words.map((word, i) => {
-        if (word === "\n") return <br key={ i }/>
+        if (word === "\n" || word === "\\n") return <br key={ i }/>
         return (
           <span className="text-mask" key={ i }>
             <span className="text-content">

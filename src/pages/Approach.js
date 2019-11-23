@@ -1,20 +1,37 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ContactForm from '../components/ContactForm';
 import Image from '../components/Image';
 import AnimatedTextBanner from '../components/TextBanner';
-
-import data from '../data.json'
+import { fetchApi } from '../utils';
 
 
 const Approach = () => {
   const stepsEl = useRef()
-  const { intro, exit, steps } = data.approach;
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await fetchApi({ url: '/pages?page=approach' })
+        setData(data[0]);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData()
+  }, []);
+
+  if (!data) return null;
+
+  console.log(data)
+
+  const { introTextBanner, exitTextBanner, steps } = data;
 
   return (
     <div className="page approach pt">
 
       <AnimatedTextBanner
-        { ...intro }
+        { ...introTextBanner }
         isDown
         className="approach__intro mx mb-0"
         titleClass="t-uppercase"
@@ -22,13 +39,13 @@ const Approach = () => {
       />
 
       <section ref={ stepsEl } className="approach__steps pt">
-        { steps.map(({ number, title, description, graphic }) => (
+        { steps && steps.map(({ title, description, image }, i) => (
           <section key={ title } className="approach__step">
             <div className="step__text mx">
               <div className="step__text-top inline-img__wrapper t-lg t-punch t-uppercase mb-3">
                 Step
                 <div className="inline-img h-100">
-                  <img src={ number } alt={ title } />
+                  <img src={ `/assets/svgs/step${i + 1}.svg` } alt={ i + 1 } />
                 </div>
               </div>
               <div className="step__text-middle">
@@ -37,7 +54,7 @@ const Approach = () => {
               </div>
             </div>
             <Image
-              image={ { src: graphic } }
+              image={ { src: image.url } }
               alt={ title }
               baseClass="step"
               classAddition="mx"
@@ -46,9 +63,9 @@ const Approach = () => {
         ))}
       </section>
 
-      <p className="approach__exit-desc t-md mx mb-4">{ exit.description }</p>
+      <p className="approach__exit-desc t-md mx mb-4">{ exitTextBanner.intro }</p>
       <AnimatedTextBanner
-        { ...exit }
+        { ...exitTextBanner }
         titleClass="t-uppercase"
         className="approach__exit mx"
       />

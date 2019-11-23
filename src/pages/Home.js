@@ -13,7 +13,7 @@ const getArrowAxis = (arrow) => arrow === "↑" || arrow === "↓" ? "y" : 'x';
 
 const Home = () => {
   const projectsEl = useRef()
-  const { projects, news, home: { video, intro, links, projectIds, exitBanner } } = data
+  const { projects, news, home: { video, intro, links, exitBanner } } = data
 
   return (
     <div className="page home">

@@ -6,14 +6,12 @@ import Image from '../components/Image';
 import data from '../data.json'
 
 const About = () => {
-  const { punchlines, title, text, heroimage, image, topics, topicsTitle, exitBanner } = data.about;
+  const { punchline, title, text, heroimage, image, topics, topicsTitle, exitBanner } = data.about;
 
   return (
     <div className="page about pt">
-      <section className="about__punchlines mx">
-        <ul className="t-lg t-uppercase t-punch">
-          { punchlines.map(line => <li key={ line }>{ line }</li>) }
-        </ul>
+      <section className="about__punchlines mx t-lg t-uppercase t-punch">
+        { punchline }
       </section>
 
       <section>
