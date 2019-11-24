@@ -1,35 +1,15 @@
-import React, { useRef, useEffect, useState } from 'react';
-import ContactForm from '../components/ContactForm';
+import React, { useRef } from 'react';
 import Image from '../components/Image';
 import AnimatedTextBanner from '../components/TextBanner';
-import { fetchApi } from '../utils';
 
 
-const Approach = () => {
+const Approach = ({ data }) => {
   const stepsEl = useRef()
-  const [data, setData] = useState()
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await fetchApi({ url: '/pages?page=approach' })
-        setData(data[0]);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    fetchData()
-  }, []);
-
   if (!data) return null;
-
-  console.log(data)
-
   const { introTextBanner, exitTextBanner, steps } = data;
 
   return (
-    <div className="page approach pt">
-
+    <React.Fragment>
       <AnimatedTextBanner
         { ...introTextBanner }
         isDown
@@ -37,7 +17,6 @@ const Approach = () => {
         titleClass="t-uppercase"
         onClick={ () => stepsEl.current.scrollIntoView({ behavior: 'smooth' })}
       />
-
       <section ref={ stepsEl } className="approach__steps pt">
         { steps && steps.map(({ title, description, image }, i) => (
           <section key={ title } className="approach__step">
@@ -62,16 +41,13 @@ const Approach = () => {
           </section>
         ))}
       </section>
-
       <p className="approach__exit-desc t-md mx mb-4">{ exitTextBanner.intro }</p>
       <AnimatedTextBanner
         { ...exitTextBanner }
         titleClass="t-uppercase"
         className="approach__exit mx"
       />
-
-      <ContactForm full />
-    </div>
+    </React.Fragment>
   );
 }
 

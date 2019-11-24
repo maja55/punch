@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Page from './pages/Page';
 import About from './pages/About';
 import Approach from './pages/Approach';
 import Contact from './pages/Contact';
@@ -17,7 +18,9 @@ export const ContactContext = React.createContext({});
 
 const App = () => {
   let location = useLocation();
+  const page = location.pathname.substr(1) || 'home';
   const [data, setData] = useState();
+  const [pageData, setPageData] = useState({});
   const [isMenuOpen, openMenu] = useState(() => false);
   const [isLoaded, setLoaded] = useState(() => false);
   const [animate, setAnimation] = useState(() => false);
@@ -75,7 +78,7 @@ const App = () => {
     if(isMenuOpen) toggleMenu(false)
 
     // fetch shared data
-    async function fetchData() {
+    async function fetchSharedData() {
       try {
         const endpoints = [ '/navigationlinks', '/sociallinks', '/labels'];
         const [ navigationLinks, socialLinks, labels ] = await Promise.all(endpoints.map((url) => fetchApi({ url })))
@@ -85,14 +88,18 @@ const App = () => {
       }
     }
 
-    fetchData();
+    fetchSharedData();
   }, []);
+
+  const updatePageData = (key, value) => {
+    setPageData({ ...pageData, [key]: value })
+  }
 
   if (!data) return null;
 
   return (
     <div
-      className={`page__wrapper page__wrapper--${location.pathname.substr(1)}`}
+      className={`page__wrapper page__wrapper--${page}`}
       ref={ pageEl }>
       { isLoaded &&
         <Header
@@ -113,35 +120,41 @@ const App = () => {
       />
 
       <ContactContext.Provider value={ data.contact }>
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/work">
-            <Work />
-          </Route>
-          <Route path="/approach">
-            <Approach />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/project/:id">
-            <Project/>
-          </Route>
-          <Route path="/news/">
-            <div/>
-          </Route>
-          <Route path="/news/:id">
-            <div/>
-          </Route>
-          <Route path="/services">
-            <div/>
-          </Route>
-        </Switch>
+        <Page
+          page={ page }
+          pageData={ pageData }
+          updatePageData={ updatePageData }
+        >
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/work">
+              <Work />
+            </Route>
+            <Route path="/approach">
+              <Approach data={ pageData && pageData.approach } />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/project/:id">
+              <Project/>
+            </Route>
+            <Route path="/news/">
+              <div/>
+            </Route>
+            <Route path="/news/:id">
+              <div/>
+            </Route>
+            <Route path="/services">
+              <div/>
+            </Route>
+          </Switch>
+        </Page>
       </ContactContext.Provider>
 
       <Footer
