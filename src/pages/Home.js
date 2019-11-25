@@ -7,17 +7,14 @@ import ProjectsList from '../components/ProjectsList';
 import Logo from '../components/Logo';
 import Image, { LazyImage } from '../components/Image';
 
-import data from '../data.json'
 
-const getArrowAxis = (arrow) => arrow === "↑" || arrow === "↓" ? "y" : 'x';
-
-const Home = () => {
+const Home = ({ data }) => {
   const projectsEl = useRef()
-  const { projects, news, home: { video, intro, links, exitBanner } } = data
+  if (!data) return null;
+  const { projects, news, video, introTextBanner, textBanner, extraTextBanner, exitTextBanner, roloBanner } = data
 
   return (
-    <div className="page home">
-
+    <React.Fragment>
       <section className="home__video">
         <video
           src={ video.url }
@@ -35,50 +32,50 @@ const Home = () => {
         </div>
 
         <section className="home__intro">
-          <div className="t-sm">{ intro.heading }</div>
-          <div className="t-lg t-punch t-uppercase">{ intro.punchline }</div>
+          <div className="t-sm">{ introTextBanner.intro }</div>
+          <div className="t-lg t-punch t-uppercase">{ introTextBanner.punchline }</div>
         </section>
 
-        <section className="home__links mx mb-4">
-          { links.map(({ heading, label, arrow, href }) => (
-            <Button
-              key={ label }
-              className="home__link"
-              href={ href }
-              onClick={ (e) => {
-                if (label.toLowerCase() === 'projects') {
-                  e.preventDefault();
-                  projectsEl.current.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <div className="t-sm t-light">{ heading }</div>
+        <section className="home__links mx mb-0 mb-4">
+          <div className="home__link">
+            <Link to={ extraTextBanner.link }>
+              <div className="t-sm t-light">{ extraTextBanner.intro }</div>
               <div className="t-uppercase t-lg t-punch t-uppercase">
-                { label } 
-                { arrow &&
-                  <span className={ `arrow bounce-${getArrowAxis(arrow)}` }>
-                    { arrow }
-                  </span>
-                }
+                { extraTextBanner.punchline }
+                <span className="arrow bounce-x">→</span>
               </div>
-            </Button>
-          ))}
+            </Link>
+          </div>
+
+          <Button
+            className="home__link"
+            onClick={(e) => {
+              e.preventDefault();
+              projectsEl.current.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            <div className="t-sm t-light">{ textBanner.intro }</div>
+            <div className="t-uppercase t-lg t-punch t-uppercase">
+              { textBanner.punchline } 
+              <span className="arrow bounce-y">↓</span>
+            </div>
+          </Button>
         </section>
 
-        <LazyImage widthShare={ 0.5 } />
+        {/* <LazyImage widthShare={ 0.5 } /> */}
 
         <div ref={ projectsEl }>
           <ProjectsList projects={ projects } />
         </div>
 
-        <RoloBanner { ...exitBanner } />
+        <RoloBanner { ...roloBanner } />
 
         <section className="home__news mx">
           <div className="home__newslist">
-            { news.slice(0,3).map(({ id, image, title }) => (
+            { news.slice(0,3).map(({ id, thumbnail, title }) => (
               <Link key={ id } to={ `news/${id}` }>
                 <div className="news-link">
-                  <Image image={ image } classAddition="mb-2" alt={ title } />
+                  <Image image={ { src: thumbnail.url} } classAddition="mb-2" alt={ title } />
                   <div className="t-md news-link__text">
                     <span className="d-lg-none">{ title }&nbsp;→</span>
                     <span className="d-none d-lg-inline-block">
@@ -90,10 +87,10 @@ const Home = () => {
               </Link>
             )) }
           </div>
-          <Link to='/news'>
-            <div className="t-sm t-light">Keep up with us</div>
+          <Link to={ exitTextBanner.link }>
+            <div className="t-sm t-light">{ exitTextBanner.intro }</div>
             <div className="t-uppercase t-lg t-punch t-uppercase">
-              More news
+              { exitTextBanner.punchline }
               <span className="arrow bounce-x">→</span>
             </div>
           </Link>
@@ -101,8 +98,7 @@ const Home = () => {
 
         <ContactForm full />
       </div>
-
-    </div>
+    </React.Fragment>
   );
 }
 

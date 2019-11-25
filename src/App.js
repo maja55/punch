@@ -127,21 +127,21 @@ const App = () => {
         >
           <Switch>
             <Route path="/" exact>
-              <Home />
+              <Home data={ pageData.home } />
             </Route>
             <Route path="/work">
               <Work />
             </Route>
             <Route path="/approach">
-              <Approach data={ pageData && pageData.approach } />
+              <Approach data={ pageData.approach } />
             </Route>
             <Route path="/about">
-              <About />
+              <About data={ pageData.about } />
             </Route>
             <Route path="/contact">
-              <Contact />
+              <Contact data={ pageData.contact } />
             </Route>
-            <Route path="/project/:id">
+            <Route path="/projects/:id">
               <Project/>
             </Route>
             <Route path="/news/">

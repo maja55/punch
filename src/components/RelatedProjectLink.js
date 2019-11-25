@@ -6,7 +6,7 @@ import Arrow from '../components/Arrow';
 
 const RelatedProjectLink = ({ isNext, href, id, label, name, relatedimage }) => {
   const AnchorTag = href ? Button : Link;
-  const anchorProps = href ? { href, target: '_blank' } : { to: `/project/${id}` };
+  const anchorProps = href ? { href, target: '_blank' } : { to: `/projects/${id}` };
 
   return (
     <AnchorTag { ...anchorProps }>

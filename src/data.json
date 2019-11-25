@@ -1,10 +1,4 @@
 {
-  "contact": {
-    "heroimage": {
-      "src": "https://via.placeholder.com/1440x720.jpeg/555555"
-    }
-  },
-
   "home": {
     "video": {
       "url": "/assets/video/Elle_Myra.mp4",
@@ -35,81 +29,57 @@
     }
   },
 
-  "work": {
-    "title": "All projects",
-    "exitBanner": {
-      "label": "OUR APPROACH →",
-      "href": "/approach"
+  "services": [
+    {
+      "heading": "Brand Strategy",
+      "items": [
+        "Research and insights",
+        "Brand architecture",
+        "Brand platforms",
+        "Naming and nomenclature systems",
+        "Communication strategy",
+        "Content strategy",
+        "Design strategy",
+        "Digital strategy",
+        "Portfolio strategy",
+        "Social media strategy"
+      ]
+    }, {
+      "heading": "Brand Communication",
+      "items": [
+        "Art direction",
+        "Brand story",
+        "Campaign concepts",
+        "Editorial design",
+        "Social media"
+      ]
+    }, {
+      "heading": "Brand Design",
+      "items": [
+        "Visual identity",
+        "Verbal identity",
+        "Sound identity",
+        "Typography",
+        "Image language",
+        "Illustration language",
+        "UX/UI design",
+        "Motion design",
+        "Brand portals/guidance"
+      ]
+    }, {
+      "heading": "Brand Experience",
+      "items": [
+        "Digital product design",
+        "Retail",
+        "Environments",
+        "Exhibitions",
+        "Packaging Design",
+        "Service design",
+        "Films",
+        "Application design"
+      ]
     }
-  },
-
-  "about": {
-    "punchline": "Modern experiences. \n Exceptional service. \n Problem solved.",
-    "title": "A holistic approach",
-    "text": "It´s the sum of all interactions that constitute the experience of a brand. We therefore need to understand the entire brand ecosphere and anticipate future needs among the intended users, to be able to cater for seamless interactions across all touchpoints.",
-    "heroimage": {
-      "src": "https://via.placeholder.com/1440x720.jpeg/555555"
-    },
-    "image": {
-      "src": "https://via.placeholder.com/1200x720.jpeg/555555"
-    },
-    "exitBanner": {
-      "label": "SEE OUR WORK →",
-      "href": "/work"
-    },
-    "topicsTitle": "What we do",
-    "topics": [
-      {
-        "heading": "Brand Strategy",
-        "items": [
-          "Research and insights",
-          "Brand architecture",
-          "Brand platforms",
-          "Naming and nomenclature systems",
-          "Communication strategy",
-          "Content strategy",
-          "Design strategy",
-          "Digital strategy",
-          "Portfolio strategy",
-          "Social media strategy"
-        ]
-      }, {
-        "heading": "Brand Communication",
-        "items": [
-          "Art direction",
-          "Brand story",
-          "Campaign concepts",
-          "Editorial design",
-          "Social media"
-        ]
-      }, {
-        "heading": "Brand Design",
-        "items": [
-          "Visual identity",
-          "Verbal identity",
-          "Sound identity",
-          "Typography",
-          "Image language",
-          "Illustration language",
-          "UX/UI design",
-          "Motion design",
-          "Brand portals/guidance"
-        ]
-      }, {
-        "heading": "Brand Experience",
-        "items": [
-          "Digital product design",
-          "Retail",
-          "Environments",
-          "Exhibitions",
-          "Packaging Design",
-          "Service design",
-          "Films",
-          "Application design"
-        ]
-      }
-    ]
-  },
+  ],
 
   "news": [
     {
@@ -168,7 +138,7 @@
       "thumbnail": {
         "src": "https://res.cloudinary.com/maja55/image/upload/v1573470964/jmutdymkvl9ugq7dekgv.jpg"
       },
-      "intro": "Not Your average  \n  e-commerce Website",
+      "intro": "Not Your average \n e-commerce Website",
       "heroimage": {
         "src": "https://via.placeholder.com/1440x840.jpeg/555555"
       },

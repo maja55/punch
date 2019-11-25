@@ -1,35 +1,32 @@
 import React, { useRef } from 'react';
-import ContactForm from '../components/ContactForm';
 import Image from '../components/Image';
 import AnimatedTextBanner from '../components/TextBanner';
 
-import data from '../data.json'
 
-const Contact = () => {
-  const contactForm = useRef()
-  const { intro, punchline, heroimage } = data.contact;
+const Contact = ({ data }) => {
+  const contactForm = useRef();
+  if (!data) return null;
+  const { introTextBanner, heroimage } = data;
 
   return (
-    <div className="page contact pt">
+    <React.Fragment>
       <AnimatedTextBanner
         className="contact__intro mx"
         titleClass="t-md mb-1"
-        title={ intro }
-        punchline={ punchline }
+        title={ introTextBanner.intro }
+        punchline={ introTextBanner.punchline }
         onClick={() => contactForm.current.scrollIntoView({ behavior: 'smooth' })}
         arrowClass="d-none d-lg-inline-block"
         isDown
       />
       <Image
         baseClass="contact"
-        image={ heroimage }
+        image={ { src: heroimage[0].url } }
         alt="contact"
         classAddition="w-100"
       />
-      <section className="mb-0 pt" ref={ contactForm }>
-        <ContactForm full />
-      </section>
-    </div>
+      <section className="pt mb-0" ref={ contactForm } />
+    </React.Fragment>
   );
 }
 

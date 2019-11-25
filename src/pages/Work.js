@@ -7,7 +7,7 @@ import Button from '../components/Button';
 import data from '../data.json'
 
 const Work = () => {
-  const { projects, projectFilters, work: { title, exitBanner } } = data;
+  const { projects, projectFilters } = data;
   const [activeFilter, setFilter] = useState();
   const [activeProjects, setProjects] = useState(projects);
 
@@ -25,8 +25,8 @@ const Work = () => {
         <Button
           className="work__title"
           onClick={ () => filterProjects() }>
-          <h1 className="t-lg t-punch t-uppercase">
-            { title }
+          <h1 className="t-lg t-punch">
+            ALL PROJECTS
             <span className="arrow bounce-x d-none d-lg-inline-block">→</span>
           </h1>
         </Button>
@@ -45,7 +45,7 @@ const Work = () => {
 
       <ProjectsList projects={ activeProjects } />
       
-      <RoloBanner { ...exitBanner } />
+      <RoloBanner />
 
       <ContactForm />
     </div>

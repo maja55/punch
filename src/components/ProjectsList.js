@@ -6,12 +6,12 @@ import withOnScrollAnimation from '../components/WithOnScrollAnimation'
 
 const ProjectThumbnail = ({ id, name, tags, thumbnail, href }) => {
   const AnchorTag = href ? 'a' : Link;
-  const anchorProps = href ? { href, target: '_blank' } : { to: `/project/${id}` };
+  const anchorProps = href ? { href, target: '_blank' } : { to: `/projects/${id}` };
 
   return (
     <AnchorTag { ...anchorProps }>
       <div>
-        <Image image={ thumbnail } alt={ name } />
+        <Image image={ { src: thumbnail.url } } alt={ name } />
         <footer>
           <Button className="projects-list__project-name t-md">
               <span className="t-uppercase d-lg-none">{ name }&nbsp;→</span>
@@ -21,9 +21,9 @@ const ProjectThumbnail = ({ id, name, tags, thumbnail, href }) => {
               </span>
           </Button>
           <p className="projects-list__project-tags t-sm">
-            { tags.map((tag, i, a) => 
-              <span key={ tag }>
-                { `${tag}${i < a.length - 1 ? ', ' : ''}` }
+            { tags && tags.map((label, i, a) => 
+              <span key={ label }>
+                { `${label}${i < a.length - 1 ? ', ' : ''}` }
               </span>
             ) }
           </p>

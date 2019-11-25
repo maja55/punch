@@ -98,6 +98,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section {
+  max-width: 100vw;
+}
+
+section.mx {
+  max-width: 90vw;
+}
+
 section:not(.mb-0) {
   margin-bottom: 22vw;
 
@@ -156,12 +164,6 @@ ul {
   position: absolute;
   bottom: 48px;
   right: 5vw;
-}
-
-.page__wrapper-- {
-  footer {
-    background-color: $dark;
-  }
 }
 
 .inline-img__wrapper {

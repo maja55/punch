@@ -18,11 +18,10 @@ const Project = () => {
   const projectsCount = data.projects.length
   const previousProject = data.projects[id - 2] || data.projects[projectsCount - 1];
   const nextProject = data.projects[id] || data.projects[0];
-  const { exitBanner } = data.work;
   const Article = analyticsLayout ? AnalyticsArticle : DesignArticle;
 
   return (
-    <div className="page project pt">
+    <React.Fragment>
 
       <section className="project__intro mb-0">
         { intro &&
@@ -73,10 +72,10 @@ const Project = () => {
         />
       </section>
 
-      <RoloBanner { ...exitBanner } />
+      <RoloBanner />
 
       <ContactForm />
-    </div>
+    </React.Fragment>
   );
 }
 
