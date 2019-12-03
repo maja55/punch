@@ -11,7 +11,7 @@ import DesignArticle from '../components/DesignArticle';
 import data from '../data.json'
 
 const Project = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const articlesEl = useRef()
   // TODO: make a request to retrive project data by id
   const { articles, analyticsLayout, heroimage, intro, name, tags } = data.projects[id - 1];

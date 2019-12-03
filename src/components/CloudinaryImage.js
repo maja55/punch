@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const makeUrlParams = props => {
-  let { urlParams, quality, fluid, blurUrlParams, useUrlParamsToBlur, blurSize } = props
+  let urlParams, blurUrlParams, quality
+  ({ urlParams, blurUrlParams, quality } = props)
+  const { fluid, useUrlParamsToBlur, blurSize } = props
   const imgFormat = 'f_auto'
   quality = typeof quality === `boolean`
     ? quality
@@ -179,8 +181,9 @@ class Image extends React.Component {
     const { imgLoaded, isVisible } = this.state
     const fadeIn = animateOnScroll && imgLoaded && isVisible
     const showPlaceholder = !imgLoaded && !animateOnScroll
+    let urlParams, blurUrlParams
 
-    let {urlParams, blurUrlParams} = makeUrlParams(this.props)
+    ({ urlParams, blurUrlParams } = makeUrlParams(this.props))
     const srcSet = this.createBrakePointsFluid(urlParams)
     urlParams = `${urlParams},w_${fluid.maxWidth}`
 
